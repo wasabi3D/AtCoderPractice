@@ -3,23 +3,13 @@
 using namespace std;
 
 
-vector<int> decompose2digits(int n){
-    vector<int> digits(0);
+vector<long long> decompose2digits(long long n){
+    vector<long long> digits(0);
     while(n / 10 > 0){
         digits.push_back(n % 10);
         n /= 10;
     }
 
-    digits.push_back(n);
-    return digits;
-}
-
-vector<long long> convert2basek(long long n, const long long& base){
-    vector<long long> digits(0);
-    while(n > base){
-        digits.push_back(n % base);
-        n /= base;
-    }
     digits.push_back(n);
     return digits;
 }
@@ -35,11 +25,9 @@ long long convert2decimal(const vector<long long>& digits, const long long& base
     return ret;
 }
 
-
 int main(){
-    // for(int i : convert2basek(720453636425089, 8)){
-    //     cout << i << endl;
-    // }
-    cout << "hello" * 3 << endl;  
+    long long K, A, B; cin >> K >> A >> B;
 
+    long long b10A = convert2decimal(decompose2digits(A), K), b10B = convert2decimal(decompose2digits(B), K);
+    cout << b10A * b10B << endl;
 }
