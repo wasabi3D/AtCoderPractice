@@ -36,10 +36,19 @@ long long convert2decimal(const vector<long long>& digits, const long long& base
 }
 
 
+void scpt(char ** ch){
+    *ch = 'a';
+}
+
 int main(){
     // for(int i : convert2basek(720453636425089, 8)){
     //     cout << i << endl;
     // }
-    cout << "hello" * 3 << endl;  
+    char c = 'a';
+    char* pc = &c;
+    char** pc2 = &pc;
+
+    *pc2 = "b";
+    cout << c << endl;
 
 }
