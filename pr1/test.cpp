@@ -40,6 +40,13 @@ void scpt(char ** ch){
     // *ch = 'a';
 }
 
+
+void print_vec(vector<int> v){
+    for(int i : v){
+        cout << i << endl;
+    }
+}
+
 int main(){
     // for(int i : convert2basek(720453636425089, 8)){
     //     cout << i << endl;
@@ -52,11 +59,8 @@ int main(){
     // cout << c << endl;
 
 
-    double a = 1.0;
-    int b = 1;
-    if(a == b){
-        cout << "Yes\n";
-    }else{
-        cout << "No\n";
-    }
+    vector<int> a = {1,2,3};
+    print_vec(a);
+    a.erase(a.begin());
+    print_vec(a);
 }
