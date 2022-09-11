@@ -59,8 +59,5 @@ int main(){
     // cout << c << endl;
 
 
-    vector<int> a = {1,2,3};
-    print_vec(a);
-    a.erase(a.begin());
-    print_vec(a);
+    cout << (-1 + 5) % 5 << endl;
 }
